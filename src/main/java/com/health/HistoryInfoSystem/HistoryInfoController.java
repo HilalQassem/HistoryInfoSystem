@@ -4,71 +4,71 @@ import javax.servlet.http.HttpServletRequest;
 import java.time.LocalDate;
 import java.util.Objects;
 
-public class LoggingController {
-    private LoggingDAO loggingDAO;
-    public LoggingController(){
-        loggingDAO=new LoggingDAO();
+public class HistoryInfoController {
+    private HistoryInfoDAO historyInfoDAO;
+    public HistoryInfoController(){
+        historyInfoDAO =new HistoryInfoDAO();
     }
 
     public DeptAdmin deptAdminLogin(HttpServletRequest request){
-        return loggingDAO.deptAdminLogin(createDeptAdminFromLoginRequest(request));
+        return historyInfoDAO.deptAdminLogin(createDeptAdminFromLoginRequest(request));
     }
     public Admin adminLogin(HttpServletRequest request){
-        return loggingDAO.adminLogin(createAdminFromLoginRequest(request));
+        return historyInfoDAO.adminLogin(createAdminFromLoginRequest(request));
     }
     public Doctor doctorLogin(HttpServletRequest request){
-        return loggingDAO.doctorLogin(createDoctorFromLoginRequest(request));
+        return historyInfoDAO.doctorLogin(createDoctorFromLoginRequest(request));
     }
     public Patient patientLogin(HttpServletRequest request){
-        return loggingDAO.patientLogin(createPatientFromLoginRequest(request));
+        return historyInfoDAO.patientLogin(createPatientFromLoginRequest(request));
     }
     public Integer addDoctor (HttpServletRequest request){
-        return loggingDAO.addDoctor(createDoctorFromRequest(request));
+        return historyInfoDAO.addDoctor(createDoctorFromRequest(request));
     }
     public Integer deleteDoctor (HttpServletRequest request){
-        return loggingDAO.deleteDoctor(createDoctorFromRequest(request));
+        return historyInfoDAO.deleteDoctor(createDoctorFromRequest(request));
     }
     public Doctor[] getDeptDoctors(HttpServletRequest request){
-        return loggingDAO.viewDeptDoctors((DeptAdmin) request.getAttribute("deptAdmin"));
+        return historyInfoDAO.viewDeptDoctors((DeptAdmin) request.getAttribute("deptAdmin"));
     }
     public Visit[] getVisitsLog(HttpServletRequest request){
         Patient patient=createPatientFromRequest(request);
-        patient.setPatientId(loggingDAO.getPatientId(patient.getName()));
-        return loggingDAO.viewVisitLog(patient);
+        patient.setPatientId(historyInfoDAO.getPatientId(patient.getName()));
+        return historyInfoDAO.viewVisitLog(patient);
     }
     public Patient[] getPatients(HttpServletRequest request){
         Doctor doctor= createDoctorFromDoctorRequest(request);
-        return loggingDAO.viewPatients(doctor);
+        return historyInfoDAO.viewPatients(doctor);
     }
     public Integer addPatient(HttpServletRequest request){
         Patient patient=createPatientFromRequest(request);
-        return loggingDAO.addPatient(patient);
+        return historyInfoDAO.addPatient(patient);
     }
     public Integer addVisit(HttpServletRequest request){
         Visit visit=createVisitFromRequest(request);
-        return loggingDAO.addVisit(visit);
+        return historyInfoDAO.addVisit(visit);
     }
     public Integer addDepartment (HttpServletRequest request){
         Department department=new Department();
         department.setName(request.getParameter("departmentName"));
-        return loggingDAO.addDepartment(department);
+        return historyInfoDAO.addDepartment(department);
     }
     public Integer deleteDepartment (HttpServletRequest request){
         Department department=new Department();
         department.setDepartmentId(Integer.parseInt(request.getParameter("departmentId")));
-        return loggingDAO.deleteDepartment(department);
+        return historyInfoDAO.deleteDepartment(department);
     }
     public Integer addDeptAdmin(HttpServletRequest request){
-        return loggingDAO.addDeptAdmin(createDeptAdminFromRequest(request));
+        return historyInfoDAO.addDeptAdmin(createDeptAdminFromRequest(request));
     }
     public Integer deleteDeptAdmin(HttpServletRequest request){
-        return loggingDAO.deleteDeptAdmin(createDeptAdminFromRequest(request));
+        return historyInfoDAO.deleteDeptAdmin(createDeptAdminFromRequest(request));
     }
     public Department[] getDepartments(HttpServletRequest request){
-        return loggingDAO.viewDepartments();
+        return historyInfoDAO.viewDepartments();
     }
     public DeptAdmin[] getDeptAdmins(HttpServletRequest request){
-        return loggingDAO.viewDeptAdmins();
+        return historyInfoDAO.viewDeptAdmins();
     }
     private DeptAdmin createDeptAdminFromLoginRequest(HttpServletRequest request){
         DeptAdmin deptAdmin =new DeptAdmin();
@@ -142,7 +142,7 @@ public class LoggingController {
     private Visit createVisitFromRequest(HttpServletRequest request){
         Visit visit=new Visit();
         visit.setDoctorId(((Doctor)request.getSession().getAttribute("doctor")).getDoctorId());
-        visit.setPatientId(loggingDAO.getPatientId(request.getParameter("patientName")));
+        visit.setPatientId(historyInfoDAO.getPatientId(request.getParameter("patientName")));
         visit.setDate(LocalDate.parse(request.getParameter("date")));
         visit.setReason(request.getParameter("reason"));
         visit.setPrescription((String) request.getAttribute("prescription"));

@@ -9,9 +9,9 @@ import java.io.IOException;
 
 @WebServlet(name = "delete-doctor", value = "/delete-doctor")
 public class DeleteDoctorServlet extends HttpServlet {
-    private LoggingController controller;
+    private HistoryInfoController controller;
     public void init(){
-        controller=new LoggingController();
+        controller=new HistoryInfoController();
     }
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         if(controller.deleteDoctor(request)!=0){

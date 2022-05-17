@@ -3,10 +3,10 @@ package com.health.HistoryInfoSystem;
 import java.sql.*;
 import java.time.LocalDate;
 
-public class LoggingDAO {
+public class HistoryInfoDAO {
     private Connection connection;
 
-    public LoggingDAO(){
+    public HistoryInfoDAO(){
         String hostUrl = "jdbc:mysql://localhost:3306/";
         String databaseName = "loggingsystem";
         String driverClass = "com.mysql.cj.jdbc.Driver";

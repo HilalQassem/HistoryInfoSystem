@@ -10,9 +10,9 @@ import java.util.Objects;
 
 @WebServlet(name = "get-patient-log", value = "/get-patient-log")
 public class PatientHistoryServlet extends HttpServlet {
-        private LoggingController controller;
+        private HistoryInfoController controller;
         public void init(){
-            controller=new LoggingController();
+            controller=new HistoryInfoController();
         }
         public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
                 Visit[] visits=controller.getVisitsLog(request);

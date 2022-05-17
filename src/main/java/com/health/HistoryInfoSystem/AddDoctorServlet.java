@@ -9,9 +9,9 @@ import java.io.IOException;
 
 @WebServlet(name = "add-doctor", value = "/add-doctor")
 public class AddDoctorServlet extends HttpServlet {
-    private LoggingController controller;
+    private HistoryInfoController controller;
     public void init(){
-        controller=new LoggingController();
+        controller=new HistoryInfoController();
     }
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         if(controller.addDoctor(request)!=0){

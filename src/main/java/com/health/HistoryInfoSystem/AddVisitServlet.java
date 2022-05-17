@@ -25,9 +25,9 @@ public class AddVisitServlet extends HttpServlet {
         }
         return Constants.DEFAULT_FILENAME;
     }
-    private LoggingController controller;
+    private HistoryInfoController controller;
     public void init(){
-        controller=new LoggingController();
+        controller=new HistoryInfoController();
     }
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String uploadPath = "c:"+ File.separator + UPLOAD_DIRECTORY;

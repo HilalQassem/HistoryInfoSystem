@@ -10,9 +10,9 @@ import java.util.Objects;
 
 @WebServlet(name = "patient-zone", value = "/patient-zone")
 public class PatientZoneServlet extends HttpServlet {
-    private LoggingController controller;
+    private HistoryInfoController controller;
     public void init(){
-        controller=new LoggingController();
+        controller=new HistoryInfoController();
     }
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Patient patient=controller.patientLogin(request);

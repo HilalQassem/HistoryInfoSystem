@@ -11,9 +11,9 @@ import java.util.Objects;
 
 @WebServlet(name = "deptAdmin-zone", value = "/deptAdmin-zone")
 public class DeptAdminZoneServlet extends HttpServlet {
-    private LoggingController controller;
+    private HistoryInfoController controller;
     public void init(){
-        controller=new LoggingController();
+        controller=new HistoryInfoController();
     }
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         DeptAdmin deptAdmin=controller.deptAdminLogin(request);
