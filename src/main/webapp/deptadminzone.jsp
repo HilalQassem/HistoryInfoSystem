@@ -12,11 +12,15 @@
 <html>
 <head>
   <title>${deptAdmin.getName()}</title>
+    <link rel="stylesheet" href="<c:url value="/assets/css/zone.css"/>" />
 </head>
 <body>
 ${message}
-<table>
-        <caption>Department Doctors</caption>
+<main>
+    <div class="page">
+        <h1>Department Doctors</h1>
+        <table class="layout display responsive-table">
+            <thead>
         <tr>
           <th>Doctor ID</th>
           <th>Doctor Name</th>
@@ -25,6 +29,8 @@ ${message}
           <th>Doctors' Password</th>
           <th></th>
         </tr>
+            </thead>
+            <tbody>
         <c:forEach items="${doctors}" var="doctor">
           <form action="delete-doctor" method="post">
             <tr>
@@ -34,7 +40,7 @@ ${message}
               <td><input type="text" value="${doctor.getUsername()}" name="username" readonly></td>
               <td><input type="text" value="${doctor.getPassword()}" name="password" readonly></td>
               <input type="hidden" value="${deptAdmin.getDepartmentId()}" name="departmentId">
-              <td><input type="submit" value="Delete"></td>
+              <td><input type="submit" value="Delete" class="bt"></td>
             </tr>
           </form>
         </c:forEach>
@@ -46,14 +52,12 @@ ${message}
             <td><input type="text" name="username"></td>
             <td><input type="text" name="password" ></td>
             <input type="hidden" value="${deptAdmin.getDepartmentId()}" name="departmentId">
-            <td><input type="submit" value="Add"></td>
+            <td><input type="submit" value="Add" class="bt"></td>
           </tr>
         </form>
+            </tbody>
       </table>
-<style>
-  table,th,td {
-    border: 1px solid black;
-  }
-</style>
+    </div>
+</main>
 </body>
 </html>

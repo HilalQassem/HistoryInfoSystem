@@ -33,7 +33,7 @@
             <tr>
                 <td><input type="number" value="${department.getDepartmentId()}" name="departmentId" readonly></td>
                 <td><input type="text" value="${department.getName()}" name="departmentName" readonly></td>
-                <td><input type="submit" value="Delete"></td>
+                <td><input type="submit" value="Delete" class="bt"></td>
             </tr>
             </form>
         </c:forEach>
@@ -41,7 +41,7 @@
             <tr>
                 <td><input type="number" value="" name="departmentId" readonly></td>
                 <td><input type="text" name="departmentName"></td>
-                <td><input type="submit" value="Add"></td>
+                <td><input type="submit" value="Add" class="bt"></td>
             </tr>
         </form>
                 </tbody>
@@ -73,7 +73,7 @@
                 <td><input type="text" value="${deptAdmin.getDepartmentName()}" name="deptName" readonly></td>
                 <td><input type="text" value="${deptAdmin.getUsername()}" name="username" readonly></td>
                 <td><input type="text" value="${deptAdmin.getPassword()}" name="password" readonly></td>
-                <td><input type="submit" value="Delete"></td>
+                <td><input type="submit" value="Delete" class="bt"></td>
             </tr>
         </form>
     </c:forEach>
@@ -85,7 +85,7 @@
             <td><input type="text" name="deptName" ></td>
             <td><input type="text" name="username" ></td>
             <td><input type="text" name="password"></td>
-            <td><input type="submit" value="Add"></td>
+            <td><input type="submit" value="Add" class="bt"></td>
         </tr>
     </form>
         </tbody>
