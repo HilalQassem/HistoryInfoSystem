@@ -9,6 +9,7 @@ import javax.servlet.http.Part;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.time.LocalDateTime;
 
 import static com.health.HistoryInfoSystem.Constants.*;
 
@@ -38,7 +39,7 @@ public class AddVisitServlet extends HttpServlet {
             for (Part part : request.getParts()) {
                 if(getFileName(part).indexOf('.')==-1)
                     continue;
-                fileName = part.getName()+part.hashCode()+getFileName(part).substring(getFileName(part).lastIndexOf('.'));
+                fileName = part.getName()+ LocalDateTime.now().hashCode()+getFileName(part).substring(getFileName(part).lastIndexOf('.'));
                 part.write(uploadPath + File.separator + fileName);
                 request.setAttribute(part.getName(), fileName);
             }
