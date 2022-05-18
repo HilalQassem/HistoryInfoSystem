@@ -88,4 +88,7 @@ table.responsive-table{
         border: none;
         background: none;
     }
+    table{
+        border-spacing: 10px;
+    }
 }
