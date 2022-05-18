@@ -8,7 +8,7 @@ public class HistoryInfoDAO {
 
     public HistoryInfoDAO(){
         String hostUrl = "jdbc:mysql://localhost:3306/";
-        String databaseName = "loggingsystem";
+        String databaseName = "historyinfosystem";
         String driverClass = "com.mysql.cj.jdbc.Driver";
         String username = "root";
         String password = "";
