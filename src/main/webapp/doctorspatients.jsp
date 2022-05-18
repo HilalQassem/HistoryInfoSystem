@@ -5,9 +5,14 @@
 <html>
 <head>
     <title>My Patients</title>
+    <link rel="stylesheet" href="<c:url value="/assets/css/zone.css"/>" />
 </head>
 <body>
-    <table>
+<main>
+    <div class="page">
+        <h1>Profile</h1>
+        <table class="layout display responsive-table">
+            <thead>
       <tr>
         <th>Patient ID</th>
         <th>Patient Name</th>
@@ -27,16 +32,12 @@
             <td>${patient.getJoinDate()}</td>
             <td>${patient.getSsn()}</td>
             <input type="hidden" value="${patient.getName()}" name="name">
-            <td><input type="submit" value="Get Patient Log"/></td>
+            <td><input type="submit" value="Get Patient Log" class="bt"/></td>
         </tr>
         </form>
       </c:forEach>
     </table>
-    <style>
-        table,th,td {
-            border: 1px solid black;
-        }
-    </style>
-
+    </div>
+</main>
 </body>
 </html>

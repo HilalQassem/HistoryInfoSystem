@@ -7,10 +7,15 @@
 <html>
 <head>
     <title>${patientName}</title>
+    <link rel="stylesheet" href="<c:url value="/assets/css/zone.css"/>" />
 </head>
 <body>
-<table>
-    <caption>Logs</caption>
+<main>
+
+    <div class="page">
+        <h1>Logs</h1>
+        <table class="layout display responsive-table">
+            <thead>
     <tr>
         <th>VisitId</th>
         <th>Patient Name</th>
@@ -21,6 +26,8 @@
         <th>Test</th>
         <th>Notes</th>
     </tr>
+            </thead>
+            <tbody>
     <c:forEach items="${visits}" var="visit">
         <tr>
             <td>${visit.getVisitId()}</td>
@@ -33,11 +40,9 @@
             <td>${visit.getNotes()}</td>
         </tr>
     </c:forEach>
+            </tbody>
 </table>
-<style>
-    table,th,td {
-        border: 1px solid black;
-    }
-</style>
+    </div>
+</main>
 </body>
 </html>

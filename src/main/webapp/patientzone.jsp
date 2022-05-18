@@ -9,18 +9,24 @@
 <html>
 <head>
     <title>${patient.getName()}</title>
+    <link rel="stylesheet" href="<c:url value="/assets/css/zone.css"/>" />
 </head>
 <body>
-        <table>
-            <caption>Profile</caption>
+<main>
+    <div class="page">
+        <h1>Profile</h1>
+        <table class="layout display responsive-table">
+            <thead>
             <tr>
                 <th>ID</th>
                 <th>Name</th>
                 <th>Date of Birth</th>
-                <th>Number</th>
                 <th>Join Date</th>
+                <th>Number</th>
                 <th>SSN</th>
             </tr>
+            </thead>
+            <tbody>
             <tr>
                 <td>${patient.getPatientId()}</td>
                 <td>${patient.getName()}</td>
@@ -29,11 +35,15 @@
                 <td>${patient.getJoinDate()}</td>
                 <td>${patient.getSsn()}</td>
             </tr>
+            </tbody>
         </table>
+    </div>
         <br/>
         <br/>
-        <table>
-            <caption>Logs</caption>
+    <div class="page">
+        <h1>Logs</h1>
+        <table class="layout display responsive-table">
+            <thead>
             <tr>
                 <th>VisitId</th>
                 <th>Patient Name</th>
@@ -44,7 +54,9 @@
                 <th>Test</th>
                 <th>Notes</th>
             </tr>
+            </thead>
             <c:forEach items="${visits}" var="visit">
+                <tbody>
             <tr>
                 <td>${visit.getVisitId()}</td>
                 <td>${visit.getPatientName()}</td>
@@ -55,12 +67,10 @@
                 <td><a href="download?filename=${visit.getTest()}">${empty visit.getTest().equals('')?'':'Download'}</a></td>
                 <td>${visit.getNotes()}</td>
             </tr>
+                </tbody>
             </c:forEach>
         </table>
-        <style>
-            table,th,td {
-                border: 1px solid black;
-            }
-        </style>
+    </div>
+</main>
 </body>
 </html>
