@@ -15,8 +15,10 @@
         <th>Patient Number</th>
         <th>Patient Join Date</th>
         <th>Patient SSN</th>
+        <th></th>
       </tr>
       <c:forEach items="${patients}" var="patient">
+        <form action="get-patient-log" method="post">
         <tr>
             <td>${patient.getPatientId()}</td>
             <td>${patient.getName()}</td>
@@ -24,7 +26,10 @@
             <td>${patient.getNumber()}</td>
             <td>${patient.getJoinDate()}</td>
             <td>${patient.getSsn()}</td>
+            <input type="hidden" value="${patient.getName()}" name="name">
+            <td><input type="submit" value="Get Patient Log"/></td>
         </tr>
+        </form>
       </c:forEach>
     </table>
     <style>

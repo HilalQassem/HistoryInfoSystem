@@ -28,8 +28,8 @@
             <td>${visit.getDoctorName()}</td>
             <td>${visit.getDate()}</td>
             <td>${visit.getReason()}</td>
-            <td><a href="download?filename=${visit.getPrescription()}">Download</a></td>
-            <td><a href="download?filename=${visit.getTest()}">Download</a></td>
+            <td><a href="download?filename=${visit.getPrescription()}">${empty visit.getPrescription().equals('')?'':'Download'}</a></td>
+            <td><a href="download?filename=${visit.getTest()}">${empty visit.getTest().equals('')?'':'Download'}</a></td>
             <td>${visit.getNotes()}</td>
         </tr>
     </c:forEach>
