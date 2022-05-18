@@ -12,16 +12,22 @@
 <html>
 <head>
     <title>${admin.getName()}</title>
+    <link rel="stylesheet" href="<c:url value="/assets/css/zone.css"/>" />
 </head>
 <body>
+<main>
     ${message}
-    <table>
-        <caption>Departments</caption>
+        <div class="page">
+            <h1>Departments</h1>
+            <table class="layout display responsive-table">
+                <thead>
         <tr>
             <th>Department ID</th>
             <th>Department Name</th>
             <th></th>
         </tr>
+                </thead>
+                <tbody>
         <c:forEach items="${departments}" var="department">
             <form action="delete-department" method="post">
             <tr>
@@ -38,11 +44,15 @@
                 <td><input type="submit" value="Add"></td>
             </tr>
         </form>
+                </tbody>
     </table>
+    </div>
     </br>
     </br>
-    <table>
-    <caption>Department Admins</caption>
+    <div class="page">
+        <h1>Department Admins</h1>
+        <table class="layout display responsive-table">
+            <thead>
     <tr>
         <th>Admin ID</th>
         <th>Admin Name</th>
@@ -52,6 +62,8 @@
         <th>Admins' Password</th>
         <th></th>
     </tr>
+            </thead>
+        <tbody>
     <c:forEach items="${deptAdmins}" var="deptAdmin">
         <form action="delete-departmentAdmin" method="post">
             <tr>
@@ -76,11 +88,9 @@
             <td><input type="submit" value="Add"></td>
         </tr>
     </form>
+        </tbody>
     </table>
-    <style>
-        table,th,td {
-            border: 1px solid black;
-        }
-    </style>
+    </div>
+</main>
 </body>
 </html>

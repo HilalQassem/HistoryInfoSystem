@@ -23,7 +23,7 @@
 <footer>
     <c:if test="${!empty message}">
         <div class="alert"><span class="closebtn" onclick="this.parentElement.style.display='none'">
-            &times;</span>${message}</div>
+            &times;</span><p>${message}</p></div>
     </c:if>
 </footer>
 </body>

@@ -1,6 +1,6 @@
 body{
-    background-image:  url(https://images.app.goo.gl/woed2d7J5Pj4L7ip6)  !important;
-    background-size: contain;
+    padding: 1em;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAQElEQVQIW2P89OvDfwYo+PHjJ4zJwMHBzsAIk0SXAKkCS2KTAEu++vQSbizIKGQAl0SXAJkGlsQmAbcT2Shk+wH0sCzAEOZW1AAAAABJRU5ErkJggg==);
 
 }
 * {
@@ -69,7 +69,8 @@ h1 {
 }
 .alert {
     padding:20px;
-    background-color:#7dbe7d;
+    background-color:#8ed78e;
+    color: white;
     width: fit-content;
     height: fit-content;
     border-radius: 8px;
@@ -77,7 +78,10 @@ h1 {
 
 
 }
-
+span{
+    width: fit-content;
+    height: fit-content;
+}
 /* The close button */
 .closebtn {
     margin-left: 15px;
@@ -86,7 +90,7 @@ h1 {
     float: right;
     font-size: 22px;
     line-height: 20px;
-    cursor: crosshair;
+    cursor:default;
     transition: 0.3s;
     padding: 10px;
 }

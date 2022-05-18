@@ -8,7 +8,7 @@
 <body>
 <header><h1>LOGIN</h1> </header>
 <main>
-    ${message}
+
     <form action="admin-zone" method="post" class="form_class">
         <input type="text" name="username" placeholder="Username" class="in">
         <input type="password" name="password" placeholder="Password" class="in">
@@ -16,5 +16,11 @@
         <br/>
         <input type="submit" value="Login" class="su"/>
     </form> </main>
+<footer>
+    <c:if test="${!empty message}">
+        <div class="alert"><span class="closebtn" onclick="this.parentElement.style.display='none'">
+            &times;</span><p>${message}</p></div>
+    </c:if>
+</footer>
 </body>
 </html>
