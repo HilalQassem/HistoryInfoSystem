@@ -8,7 +8,7 @@ body{
 }
 
 .container {
-    font-family: Arial;
+    font-family: 'system-ui';
     font-size: large;
     padding-left: 15px;
     padding-right: 15px;
@@ -35,7 +35,7 @@ body{
 /*start header*/
 .header{
     padding: 20px;
-    background-color: #f1f8e9;
+    background-color: lightsteelblue;
     border: 2px solid #f9fbe7;
     mso-border-shadow: yes;
 }
@@ -43,15 +43,15 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: antiquewhite;
+    background-color: lightsteelblue;
 }
 .header .logo{
     width: 60px;
-    background-color: antiquewhite;
+    background-color: lightsteelblue;
 }
 .landing{
-    background-image: url(../images/p.jpg);
-    background-size: cover;
+    background-image: url(../images/pp3.webp);
+    background-size: contain;
     height: calc(100vh - 64px);
     position: relative;
 }
@@ -86,16 +86,17 @@ body{
     grid-column-end: 5;
 
 }
-.logging  .container button {
+.logging .container button {
     display: inline-block;
-    background-color: #e3f2fd;
+    background-color: #FFE6D4;
     height: 20vh;
     justify-content: center;
     text-align: center;
     margin: 0 auto;
     padding: 10px;
-    border: 5px  #80deea solid;
-    border-radius: 3px;
+    border: 5px  lightsteelblue solid;
+    border-radius: 8px;
+    box-shadow: 5px 5px 10px rgb(0,0,0,0.3);
 }
 .dep{
     width: 140px;
