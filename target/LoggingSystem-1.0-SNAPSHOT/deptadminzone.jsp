@@ -35,12 +35,12 @@ ${message}
           <form action="delete-doctor" method="post">
             <tr>
               <td><input type="number" value="${doctor.getDoctorId()}" name="doctorId" readonly></td>
-              <td><input type="text" value="${doctor.getName()}" name="name" readonly></td>
-              <td><input type="text" value="${doctor.getSpecialty()}" name="specialty" readonly></td>
-              <td><input type="text" value="${doctor.getUsername()}" name="username" readonly></td>
-              <td><input type="text" value="${doctor.getPassword()}" name="password" readonly></td>
+              <td><input type="text" value="${doctor.getName()}" name="name" readonly ></td>
+              <td><input type="text" value="${doctor.getSpecialty()}" name="specialty" readonly ></td>
+              <td><input type="text" value="${doctor.getUsername()}" name="username" readonly ></td>
+              <td><input type="text" value="${doctor.getPassword()}" name="password" readonly ></td>
               <input type="hidden" value="${deptAdmin.getDepartmentId()}" name="departmentId">
-              <td><input type="submit" value="Delete"></td>
+              <td><input type="submit" value="Delete" class="bt"></td>
             </tr>
           </form>
         </c:forEach>
