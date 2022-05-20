@@ -9,14 +9,15 @@ import javax.servlet.http.Part;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.time.LocalDateTime;
 
-import static com.health.HistoryInfoSystem.Constants.UPLOAD_DIRECTORY;
+import static com.health.HistoryInfoSystem.Constants.*;
 
 
 @WebServlet(name = "add-visit", value = "/add-visit")
-@MultipartConfig(fileSizeThreshold = 1024 * 1024,
-        maxFileSize = 1024 * 1024 * 5,
-        maxRequestSize = 1024 * 1024 * 5 * 5)
+@MultipartConfig(fileSizeThreshold = MEMORY_THRESHOLD,
+        maxFileSize = MAX_FILE_SIZE,
+        maxRequestSize = MAX_REQUEST_SIZE)
 public class AddVisitServlet extends HttpServlet {
     private String getFileName(Part part) {
         for (String content : part.getHeader("content-disposition").split(";")) {
@@ -38,7 +39,7 @@ public class AddVisitServlet extends HttpServlet {
             for (Part part : request.getParts()) {
                 if(getFileName(part).indexOf('.')==-1)
                     continue;
-                fileName = part.getName()+part.hashCode()+getFileName(part).substring(getFileName(part).lastIndexOf('.'));
+                fileName = part.getName()+ LocalDateTime.now().hashCode()+getFileName(part).substring(getFileName(part).lastIndexOf('.'));
                 part.write(uploadPath + File.separator + fileName);
                 request.setAttribute(part.getName(), fileName);
             }

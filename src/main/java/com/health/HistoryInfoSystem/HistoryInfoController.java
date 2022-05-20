@@ -73,7 +73,7 @@ public class HistoryInfoController {
     private DeptAdmin createDeptAdminFromLoginRequest(HttpServletRequest request){
         DeptAdmin deptAdmin =new DeptAdmin();
         deptAdmin.setUsername(request.getParameter("username"));
-        deptAdmin.setPassword(request.getParameter("password"));
+        deptAdmin.setPassword(Integer.toString(request.getParameter("password").hashCode()));
         return deptAdmin;
     }
     private DeptAdmin createDeptAdminFromRequest(HttpServletRequest request){
@@ -92,19 +92,19 @@ public class HistoryInfoController {
                 }
         }
         deptAdmin.setUsername(request.getParameter("username"));
-        deptAdmin.setPassword(request.getParameter("password"));
+        deptAdmin.setPassword(Integer.toString(request.getParameter("password").hashCode()));
         return deptAdmin;
     }
     private Admin createAdminFromLoginRequest(HttpServletRequest request){
         Admin admin=new Admin();
         admin.setUsername(request.getParameter("username"));
-        admin.setPassword(request.getParameter("password"));
+        admin.setPassword(Integer.toString(request.getParameter("password").hashCode()));
         return admin;
     }
     private Doctor createDoctorFromLoginRequest(HttpServletRequest request){
         Doctor doctor=new Doctor();
         doctor.setUsername(request.getParameter("username"));
-        doctor.setPassword(request.getParameter("password"));
+        doctor.setPassword(Integer.toString(request.getParameter("password").hashCode()));
         return doctor;
     }
     private Doctor createDoctorFromDoctorRequest(HttpServletRequest request){
@@ -120,7 +120,7 @@ public class HistoryInfoController {
         doctor.setDepartmentId(Integer.parseInt(request.getParameter("departmentId")));
         doctor.setSpecialty(request.getParameter("specialty"));
         doctor.setUsername(request.getParameter("username"));
-        doctor.setPassword(request.getParameter("password"));
+        doctor.setPassword(Integer.toString(request.getParameter("password").hashCode()));
         return doctor;
     }
     private Patient createPatientFromLoginRequest(HttpServletRequest request){
