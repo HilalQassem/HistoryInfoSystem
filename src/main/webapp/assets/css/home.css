@@ -1,0 +1,108 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    font-family: Constantia;
+}
+
+.container {
+    font-family: Arial;
+    font-size: large;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+@media (min-width: 768px){
+    .container{
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px){
+    .container{
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px){
+    .container{
+        width: 1170px;
+    }
+}
+/*start header*/
+.header{
+    padding: 20px;
+    background-color: #f1f8e9;
+    border: 2px solid #f9fbe7;
+    mso-border-shadow: yes;
+}
+.header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: antiquewhite;
+}
+.header .logo{
+    width: 60px;
+    background-color: antiquewhite;
+}
+.landing{
+    background-image: url(../images/p.jpg);
+    background-size: cover;
+    height: calc(100vh - 64px);
+    position: relative;
+}
+.landing .welcome{
+    position: absolute;
+    margin: 0;
+    left: 40%;
+    top: 55%;
+    text-align: left;
+    transform: translate(-50%, -50% );
+    width: 500px;
+    max-width: 100%;
+}
+.landing .welcome p{
+    margin: 0;
+    font-size: 65px;
+    font-weight: bold;
+    line-height: 1;
+}
+.logging{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: whitesmoke;
+
+}
+.logging .container{
+    height: 20vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-column-start: 1;
+    grid-column-end: 5;
+
+}
+.logging  .container button {
+    display: inline-block;
+    background-color: #e3f2fd;
+    height: 20vh;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
+    border: 5px  #80deea solid;
+    border-radius: 3px;
+}
+.dep{
+    width: 140px;
+    display: flex;
+}
+.logging .container form{
+    display: flex;
+    padding: -20px;
+    border-right: 5px #80deea groove;
+}
