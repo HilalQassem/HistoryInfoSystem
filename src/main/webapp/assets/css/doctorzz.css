@@ -1,0 +1,106 @@
+:root{
+    --blue:lightsteelblue;
+    --black: #444;
+    --light-color: #777;
+    --border: .2rem solid var(--blue);
+    --input-border: #8b8a8b;
+    --input-focus-h: 245;
+    --input-focus-s: 100%;
+    --input-focus-l: 42%
+}
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s ease-out;
+    text-decoration: none;}
+header{
+    padding: 2rem 9%;
+    position: fixed;
+    top: 0;  right: 0;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0, .1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: beige;}
+header a{
+    font-size: 50px;
+    color: var(--light-color);
+}
+section{
+    padding: 2rem 9%;
+}
+.hh{
+    display: block;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    margin-left: 100px;
+    margin-right: 50px;
+    margin-top: 200px;
+    width: auto;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 5px 5px 10px rgb(0 0 0 / 30%);
+}
+input:hover{
+    color: var(--blue);
+    background: #fff;
+}
+
+form{
+    display: inline-block;
+
+}
+input:not(textarea){
+    line-height: 1;
+    height: 2.25rem;
+}
+
+input[type=text]{
+    font-family: 'Poppins', sans-serif;
+    padding: 0.25em 0.5em;
+    font-size: 10px;
+    background-color: beige;
+    border: 2px solid var(--light-color);
+    border-radius: 10px;
+}
+
+input[type=submit]{
+    padding: 0.25em 0.5em;
+    background-color: beige;
+    border: 2px solid var(--light-color);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+input[type=file]{
+    padding: 0.25em 0.5em;
+    background-color: beige;
+    border: 2px solid var(--light-color);
+    border-radius: 10px;
+    cursor: pointer;
+}
+input[type=date]{
+    padding: 0.25em 0.5em;
+    background-color: beige;
+    border: 2px solid var(--light-color);
+    border-radius: 10px;
+}
+input[type=tel]{
+    padding: 0.25em 0.5em;
+    background-color: beige;
+    border: 2px solid var(--light-color);
+    border-radius: 10px;
+}

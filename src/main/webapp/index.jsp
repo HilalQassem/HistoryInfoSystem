@@ -23,7 +23,6 @@
     <button id="menu-btn" class="fas fa-bars"></button>
 </header>
 <!--sidebar section-->
-<div class="ss">
 <div class="sidebar">
     <div class="logo-content">
         <div class="lo">
@@ -89,7 +88,7 @@
         <a href="#" class="btn"> contact us <span class="fas fa-chevron-right"></span></a>
     </div>
 </section>
-</div>
+
 </body>
 
 
