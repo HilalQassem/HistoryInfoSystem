@@ -7,6 +7,7 @@ public class Doctor {
     private Integer departmentId;
     private String username;
     private String password;
+    private boolean isBlocked;
 
     public Integer getDoctorId() {
         return doctorId;
@@ -52,5 +53,12 @@ public class Doctor {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+    public boolean isBlocked() {
+        return isBlocked;
+    }
+
+    public void setBlocked(boolean blocked) {
+        isBlocked = blocked;
     }
 }

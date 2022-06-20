@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 17, 2022 at 03:57 AM
+-- Generation Time: Jun 19, 2022 at 07:57 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.28
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `loggingsystem`
+-- Database: `historyinfosystem`
 --
 
 -- --------------------------------------------------------
@@ -39,7 +39,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`adminId`, `name`, `username`, `password`) VALUES
-(2, 'Hilal Qassem', 'hilalqassem', 'One_bit316');
+(2, 'Hilal Qassem', 'hilalqassem', '1653628292');
 
 -- --------------------------------------------------------
 
@@ -78,7 +78,7 @@ CREATE TABLE `dept_admin` (
 --
 
 INSERT INTO `dept_admin` (`adminId`, `name`, `departmentId`, `username`, `password`) VALUES
-(2, 'Hilal Qassem', 2, 'hilalqassem', 'One_bit316');
+(2, 'Hilal Qassem', 2, 'hilalqassem', '1653628292');
 
 -- --------------------------------------------------------
 
@@ -92,15 +92,16 @@ CREATE TABLE `doctor` (
   `specialty` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `departmentId` int(11) DEFAULT NULL,
   `username` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `password` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `password` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `isBlocked` tinyint(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `doctor`
 --
 
-INSERT INTO `doctor` (`doctorId`, `name`, `specialty`, `departmentId`, `username`, `password`) VALUES
-(1, 'Hilal Qassem', 'General', 2, 'hilalqassem', 'One_bit316');
+INSERT INTO `doctor` (`doctorId`, `name`, `specialty`, `departmentId`, `username`, `password`, `isBlocked`) VALUES
+(1, 'Hilal Qassem', 'General', 2, 'hilalqassem', '1653628292', 0);
 
 -- --------------------------------------------------------
 
@@ -175,7 +176,8 @@ INSERT INTO `visit` (`visitId`, `doctorId`, `patientId`, `date`, `reason`, `pres
 (29, 1, 3, '2022-02-02', 'fdfg', NULL, NULL, 'gdfhd'),
 (30, 1, 2, '2022-02-02', 'dfssfsdf', 'c:\\upload\\prescription487493406.pdf', 'c:\\upload\\test422647911.pdf', 'fsdfsd'),
 (31, 1, 3, '2022-02-02', 'aasfddfs', 'prescription1009279118.pdf', 'test941093843.pdf', 'sfdff'),
-(32, 1, 4, '1985-02-24', 'efsfdgd', 'prescription108193950.pdf', 'test47398321.pdf', 'sdfsdgdrg');
+(32, 1, 4, '1985-02-24', 'efsfdgd', 'prescription108193950.pdf', 'test47398321.pdf', 'sdfsdgdrg'),
+(33, 1, 2, '2022-02-02', 'dssfg', 'prescription1477837635.pdf', NULL, 'dsfdsf');
 
 --
 -- Indexes for dumped tables
@@ -239,7 +241,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `department`
 --
 ALTER TABLE `department`
-  MODIFY `departmentId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `departmentId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `dept_admin`
@@ -251,7 +253,7 @@ ALTER TABLE `dept_admin`
 -- AUTO_INCREMENT for table `doctor`
 --
 ALTER TABLE `doctor`
-  MODIFY `doctorId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `doctorId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `patient`
@@ -263,7 +265,7 @@ ALTER TABLE `patient`
 -- AUTO_INCREMENT for table `visit`
 --
 ALTER TABLE `visit`
-  MODIFY `visitId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `visitId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- Constraints for dumped tables

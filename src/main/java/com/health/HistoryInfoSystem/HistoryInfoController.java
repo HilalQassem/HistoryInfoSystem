@@ -70,6 +70,12 @@ public class HistoryInfoController {
     public DeptAdmin[] getDeptAdmins(HttpServletRequest request){
         return historyInfoDAO.viewDeptAdmins();
     }
+    public Integer blockDoctor(HttpServletRequest request){
+        Doctor doctor=new Doctor();
+        doctor.setDoctorId(Integer.parseInt(request.getParameter("doctorId")));
+        doctor.setBlocked(request.getParameter("isBlocked").equals("on"));
+        return historyInfoDAO.blockDoctor(doctor);
+    }
     private DeptAdmin createDeptAdminFromLoginRequest(HttpServletRequest request){
         DeptAdmin deptAdmin =new DeptAdmin();
         deptAdmin.setUsername(request.getParameter("username"));
