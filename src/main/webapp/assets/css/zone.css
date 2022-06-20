@@ -1,4 +1,5 @@
 body{
+    font-family: 'Indie Flower', cursive;
     padding: 1em;
     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAQElEQVQIW2P89OvDfwYo+PHjJ4zJwMHBzsAIk0SXAKkCS2KTAEu++vQSbizIKGQAl0SXAJkGlsQmAbcT2Shk+wH0sCzAEOZW1AAAAABJRU5ErkJggg==);
 }
@@ -30,12 +31,12 @@ table.display{
 }
 table.display th,
 table.display td{
-    border: 2px solid #B3BFAA;
+    border: 3px solid gainsboro;
     padding: .5em 1em;
 
 }
 
-table.display th{ background: #D5E0CC; }
+table.display th{ background: lightsteelblue; }
 table.display td{ background: #fff; }
 
 table.responsive-table{
@@ -96,8 +97,34 @@ table.responsive-table{
     }
 }
 .bt{
-    background-color: #D5E0CC;
+    /*background-color: lightsteelblue;
     border-radius: 8px;
-    padding: 4px;
+    padding: 4px;*/
+    border-color: transparent;
+    border-radius: 5px;
+    background-color: #FFE6D4;
+    padding: 8px 20px;
+    font-family: 'system-ui';
+    text-transform: uppercase;
+    letter-spacing: .8px;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    box-shadow: 6px 6px 5px rgb(0,0,0,0.2);
+    cursor: pointer;
+    font-family: 'Indie Flower', cursive;
+    font-weight: bold;
+    color: lightsteelblue;
 }
+.bt:hover{
+    background:lightsteelblue;
+    color:#FFE6D4;
+
+}
+@media (min-width: 768px){
+
+}
+
+@media (min-width: 992px){
+    }
 

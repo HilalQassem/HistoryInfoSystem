@@ -3,21 +3,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+    <link rel="stylesheet" href="<c:url value="assets/css/styles.css"/>" />
+    <link rel="stylesheet" href="<c:url value="assets/css/normalize.css"/>"/>
+    <link rel="stylesheet" href="<c:url value="assets/css/home.css"/>" />
     <title>Welcome</title>
 </head>
 <body>
+<div class="header">
+    <div class="container">
+        <img class="logo" src="assets/images/p2.jpg"/>
+    </div>
+</div>
+<div class ="landing">
+    <div class ="welcome">
+        <p>WELCOME TO OUR</p>
+        <p>HOSPITAL</p>
+    </div>
+</div>
+<div class="logging">
+    <div class="container">
         <form action="patientlogin.jsp" class="">
-            <input type="submit" value="Patient Login"/>
+            <button>Patient Login</button>
         </form>
         <form action="doctorlogin.jsp" class="">
-            <input type="submit" value="Doctor Login"/>
+            <button >Doctor Login</button>
         </form>
         <form action="deptadminlogin.jsp" class="">
-            <input type="submit" value="Department Admin Login"/>
+            <button class="dep">Departement Admin Login</button>
         </form>
         <form action="adminlogin.jsp" class="">
-            <input type="submit" value="Admin Login"/>
+            <button>Admin Login</button>
         </form>
+    </div>
+</div>
+
 </body>
 </html>

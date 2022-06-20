@@ -26,7 +26,7 @@
             <button>Patient Login</button>
         </form>
         <form action="doctorlogin.jsp" class="">
-            <button>Doctor Login</button>
+            <button >Doctor Login</button>
         </form>
         <form action="deptadminlogin.jsp" class="">
             <button class="dep">Departement Admin Login</button>

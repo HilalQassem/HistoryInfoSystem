@@ -13,6 +13,9 @@
 <head>
     <title>${admin.getName()}</title>
     <link rel="stylesheet" href="<c:url value="/assets/css/zone.css"/>" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200&family=Indie+Flower&family=Rubik+Moonrocks&family=Skranji&display=swap" rel="stylesheet">
 </head>
 <body>
 <main>
