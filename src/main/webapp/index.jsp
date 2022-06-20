@@ -12,13 +12,14 @@
 
 </head>
 <body>
+
 <!--header-->
 <header class="header">
     <a href="#" class="logo"> <i class="fas fa-heartbeat"></i>WeCare</a>
     <nav class="navbar">
         <a href="#home">home</a>
-        <a href="#contact">contact</a>
-        <a href="#about">about</a>
+        <a href="sidramohamad77@gmail.com">contact</a>
+        <a href="about.jsp">about</a>
     </nav>
     <button id="menu-btn" class="fas fa-bars"></button>
 </header>

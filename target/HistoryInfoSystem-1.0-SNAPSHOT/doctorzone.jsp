@@ -16,13 +16,13 @@
         ${message}
         <form  action="get-patients" method="post" class="gg">
             <input type="hidden" value="<%=doctor.getDoctorId()%>" name="doctorId" class="in">
-            <input type="submit" value="Get Patients List" class="in">
+            <button>Get Patients List</button>
         </form>
         <br/>
         <br/>
         <form action="get-patient-log" method="post" class="ll">
-            <input type="text" name="name" placeholder="name" class="info">
-            <input type="submit" value="Get Patient Log" class="ff">
+            <input type="text"  name="name" placeholder="name" class="info">
+            <button>Get Patient Log</button>
         </form>
         <br/>
         <br/>
@@ -31,7 +31,7 @@
             <input type="date" placeholder="dateOfBirth" name="dateOfBirth">
             <input type="tel" placeholder="number" name="number">
             <input type="tel" placeholder="SSN" name="ssn">
-            <input type="submit" value="Add Patient"/>
+            <button>Add Patient</button>
         </form>
         <br/>
         <br/>
@@ -43,7 +43,7 @@
             <input type="file" placeholder="Test" name="test" size="50">
             <input type="text" placeholder="Notes" name="notes">
             <input type="hidden" value="<%=doctor.getDoctorId()%>" name="doctorId">
-            <input type="submit" value="Add Visit"/>
+            <button>Add Visit</button>
         </form>
 </section>
 </body>

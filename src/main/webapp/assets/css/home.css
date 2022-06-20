@@ -25,14 +25,15 @@ html{
 
 section{
     padding: 2rem 9%;
+    background-color: #f5f5f5;
 }
 section:nth-child(even){
-    background: #f5f5f5;
+    background-color: #f5f5f5;
 }
 .btn{
     display: inline-block;
     margin-top: 1rem;
-    padding: .5rem;
+    padding:.5rem;
     padding-left: 1rem;
     border:var(--border);
     border-radius: .5rem;
@@ -58,10 +59,11 @@ section:nth-child(even){
     margin-left: 1rem;
 }
 
-.header{
+header{
     padding: 2rem 9%;
     position: fixed;
     top: 0;  right: 0;
+    height: 80px;
     z-index: 1000;
     width: 100%;
     box-shadow: 0 .5rem 1.5rem rgba(0,0,0, .1);
@@ -70,21 +72,21 @@ section:nth-child(even){
     justify-content: space-between;
     background: #fff;
 }
-.header .logo{
+header .logo{
     font-size: 2.5rem;
     color: var(--black);
     padding-left: 100px;
 }
-.header .logo i{
+header .logo i{
     color: var(--blue);
 }
-.header .navbar a{
+header .navbar a{
     font-size: 1.7rem;
     color: var(--light-color);
     margin-left: 2rem;
 
 }
-.headre .navbar a:hover{
+header .navbar a:hover{
     color: var(--blue);
 }
 #menu-btn{
@@ -99,7 +101,7 @@ section:nth-child(even){
 
 .sidebar{
     position: absolute;
-    top: 89.84px;
+    top: 80px;
     left:0;
     margin: 0;
     height: 100%;
@@ -187,6 +189,7 @@ section:nth-child(even){
     align-items: center;
     flex-wrap: wrap;
     gap:1.5rem;
+    background-color:#f5f5f5 ;
     padding-top: 10rem;
     padding-left: 21rem;
 }
@@ -195,10 +198,11 @@ section:nth-child(even){
 }
 .home .image img{
     width:100%;
-    margin-left: 50px;
+    margin-left: 75px;
 }
 .home .content{
     flex:1 1 45rem;
+    margin-left: 20px;
 }
 .home .content h3{
     font-size: 4.5rem;
@@ -249,6 +253,15 @@ section:nth-child(even){
         display: block;
         margin: 2.5rem;
     }
+    .sidebar{
+        width: 2rem;
+    }
+    .home.image img{
+        width: 50px;
+    }
+    .home.content{
+        width: 50px;
+    }
 }
 
 
@@ -259,5 +272,14 @@ section:nth-child(even){
     }
     .header{
         padding: 2rem;
+    }
+    .sidebar{
+        width: 2rem;
+    }
+    .home.image img{
+        width: 50px;
+    }
+    .home.content{
+        width: 50px;
     }
 }
