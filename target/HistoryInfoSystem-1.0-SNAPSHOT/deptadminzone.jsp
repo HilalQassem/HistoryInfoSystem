@@ -13,6 +13,9 @@
 <head>
   <title>${deptAdmin.getName()}</title>
     <link rel="stylesheet" href="<c:url value="/assets/css/zone.css"/>" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200&family=Indie+Flower&family=Rubik+Moonrocks&family=Skranji&display=swap" rel="stylesheet">
 </head>
 <body>
 ${message}
@@ -35,10 +38,10 @@ ${message}
           <form action="delete-doctor" method="post">
             <tr>
               <td><input type="number" value="${doctor.getDoctorId()}" name="doctorId" readonly></td>
-              <td><input type="text" value="${doctor.getName()}" name="name" readonly></td>
-              <td><input type="text" value="${doctor.getSpecialty()}" name="specialty" readonly></td>
-              <td><input type="text" value="${doctor.getUsername()}" name="username" readonly></td>
-              <td><input type="text" value="${doctor.getPassword()}" name="password" readonly></td>
+              <td><input type="text" value="${doctor.getName()}" name="name" readonly ></td>
+              <td><input type="text" value="${doctor.getSpecialty()}" name="specialty" readonly ></td>
+              <td><input type="text" value="${doctor.getUsername()}" name="username" readonly ></td>
+              <td><input type="text" value="${doctor.getPassword()}" name="password" readonly ></td>
               <input type="hidden" value="${deptAdmin.getDepartmentId()}" name="departmentId">
               <td><input type="submit" value="Delete" class="bt"></td>
             </tr>

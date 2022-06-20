@@ -303,6 +303,19 @@ public class HistoryInfoDAO {
         }
         return status;
     }
+    public Integer blockDoctor(Doctor doctor){
+        Integer status=0;
+        try {
+            String blockDoctor="UPDATE doctor SET isBlocked=? WHERE doctorId=?;";
+            PreparedStatement preparedStatement=connection.prepareStatement(blockDoctor);
+            preparedStatement.setInt(1,doctor.isBlocked()?1:0);
+            preparedStatement.setInt(2,doctor.getDoctorId());
+            status=preparedStatement.executeUpdate();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return status;
+    }
     private DeptAdmin createDeptAdminFromResultSet(ResultSet resultSet) throws Exception{
         DeptAdmin deptAdmin =null;
         if (resultSet.next()){
@@ -336,6 +349,7 @@ public class HistoryInfoDAO {
             doctor.setDepartmentId(resultSet.getInt("departmentId"));
             doctor.setUsername(resultSet.getString("username"));
             doctor.setPassword(resultSet.getString("password"));
+            doctor.setBlocked(resultSet.getString("isBlocked").equals("1")?true:false);
         }
         return doctor;
     }
