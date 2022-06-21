@@ -33,7 +33,7 @@ section:nth-child(even){
 .btn{
     display: inline-block;
     margin-top: 1rem;
-    padding: .5rem;
+    padding:.5rem;
     padding-left: 1rem;
     border:var(--border);
     border-radius: .5rem;
@@ -252,9 +252,6 @@ header .navbar a:hover{
         font-size: 2rem;
         display: block;
         margin: 2.5rem;
-    }
-    .container{
-        width: 750px;
     }
     .sidebar{
         width: 2rem;
