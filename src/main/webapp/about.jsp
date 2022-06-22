@@ -29,7 +29,7 @@
         <p>Hello, welcome to our hospital
         we are WeCare Hospital, we can help you in every medical thing, we hope that we can treat you,
             call us if you have any comments.</p>
-            <a href="#" class="btn"> contact us <span class="fas fa-chevron-right"></span></a>
+            <a href="mailto:sidramohamad77@gmail.com" class="btn"> contact us <span class="fas fa-chevron-right"></span></a>
     </div>
     <div class="image">
         <img src="assets/images/doc.png" alt="">

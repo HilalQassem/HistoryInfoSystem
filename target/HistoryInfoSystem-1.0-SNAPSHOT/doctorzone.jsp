@@ -28,7 +28,7 @@
         <br/>
         <form action="add-patient" method="post">
             <input type="text" name="name" placeholder="Name">
-            <input type="date" placeholder="dateOfBirth" name="dateOfBirth">
+            <input type="text" placeholder="Date of Birth" name="dateOfBirth" onfocus="this.type='date'">
             <input type="tel" placeholder="number" name="number">
             <input type="tel" placeholder="SSN" name="ssn">
             <button>Add Patient</button>
@@ -37,13 +37,17 @@
         <br/>
         <form action="add-visit" method="post" enctype = "multipart/form-data">
             <input type="text" name="patientName" placeholder="Patient Name">
-            <input type="date" placeholder="date" name="date">
+            <input type="text" placeholder="Visit Date" name="date" onfocus="this.type='date'">
             <input type="text" placeholder="Reason" name="reason">
-            <input type="file" placeholder="Prescription" name="prescription" size="50">
-            <input type="file" placeholder="Test" name="test" size="50">
+            <button type="button" onclick="document.getElementById('prescription').click(); this.style='display:none';
+            prescription.style='';">Upload Prescription</button>
+            <input type='file' name="prescription" id="prescription" style="display:none">
+            <button type="button" onclick="document.getElementById('test').click(); this.style='display:none';
+            test.style='';">Upload Test</button>
+            <input type='file' name="test" id="test" style="display:none">
             <input type="text" placeholder="Notes" name="notes">
             <input type="hidden" value="<%=doctor.getDoctorId()%>" name="doctorId">
-            <button>Add Visit</button>
+            <button >Add Visit</button>
         </form>
 </section>
 </body>
