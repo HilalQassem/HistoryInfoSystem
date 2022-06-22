@@ -4,7 +4,7 @@
 <%Doctor doctor=(Doctor) session.getAttribute("doctor");%>
 
 <html>
-<head>
+<head>\
     <link rel="stylesheet" href="<c:url value="assets/css/doctorzz.css"/>"/>
     <title>${doctor.getName()}</title>
 </head>

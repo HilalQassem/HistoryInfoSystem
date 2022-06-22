@@ -195,17 +195,17 @@ header .navbar a:hover{
 }
 .home .image{
     flex:1 1 45rem;
+    margin-left: 40px;
 }
 .home .image img{
     width:100%;
-    margin-left: 75px;
 }
 .home .content{
     flex:1 1 45rem;
     margin-left: 20px;
 }
 .home .content h3{
-    font-size: 4.5rem;
+    font-size: 3.5rem;
     color:var(--black);
     line-height: 1.8;
     text-shadow: var(--text-shadow);
@@ -216,6 +216,10 @@ header .navbar a:hover{
     color:var(--light-color);
     line-height: 1.8;
     padding: 1rem 0;
+}
+body{
+    padding: 1rem;
+    background: #f5f5f5;
 }
 
 
@@ -254,14 +258,28 @@ header .navbar a:hover{
         margin: 2.5rem;
     }
     .sidebar{
-        width: 2rem;
+        width: 175px;
+    }
+    .sidebar ul li button{
+        width: 100px;
+        font-size: 9px;
+        margin-bottom: 10px;
+        margin-top: 10px;
     }
     .home.image img{
-        width: 50px;
+        width: 100%;
+        margin-top: 10px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .home .image{
+        flex:1 1 20rem;
     }
     .home.content{
         width: 50px;
+        margin-left: 20px;
     }
+
 }
 
 
@@ -274,7 +292,7 @@ header .navbar a:hover{
         padding: 2rem;
     }
     .sidebar{
-        width: 2rem;
+        width: 200px;
     }
     .home.image img{
         width: 50px;
@@ -282,4 +300,18 @@ header .navbar a:hover{
     .home.content{
         width: 50px;
     }
+    .sidebar .logo-content .lo{
+        width: 10px;
+    }
+    .home .content h3{
+        margin-left: 20px;
+    }
+    .sidebar ul li button{
+        width: 100px;
+        font-size: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+
 }
