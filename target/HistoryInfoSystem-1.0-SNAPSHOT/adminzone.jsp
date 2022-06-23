@@ -43,7 +43,7 @@
         <form action="add-department" method="post">
             <tr>
                 <td><input type="number" value="" name="departmentId" readonly></td>
-                <td><input type="text" name="departmentName"></td>
+                <td><input type="text" name="departmentName" required></td>
                 <td><input type="submit" value="Add" class="bt"></td>
             </tr>
         </form>
@@ -83,11 +83,11 @@
     <form action="add-departmentAdmin" method="post">
         <tr>
             <td><input type="number" name="deptAdminId" readonly></td>
-            <td><input type="text" name="name"></td>
+            <td><input type="text" name="name" required></td>
             <td><input type="hidden" value="" name="deptId" readonly></td>
-            <td><input type="text" name="deptName" ></td>
-            <td><input type="text" name="username" ></td>
-            <td><input type="text" name="password"></td>
+            <td><input type="text" name="deptName"  required></td>
+            <td><input type="text" name="username"  required></td>
+            <td><input type="text" name="password" required></td>
             <td><input type="submit" value="Add" class="bt"></td>
         </tr>
     </form>

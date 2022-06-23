@@ -56,10 +56,10 @@ ${message}
         <form action="add-doctor" method="post">
           <tr>
             <td><input type="hidden" name="doctorId" readonly></td>
-            <td><input type="text" name="name"></td>
-            <td><input type="text" name="specialty"></td>
-            <td><input type="text" name="username"></td>
-            <td><input type="text" name="password" ></td>
+            <td><input type="text" name="name" required></td>
+            <td><input type="text" name="specialty" required></td>
+            <td><input type="text" name="username" required></td>
+            <td><input type="text" name="password" required></td>
             <td></td>
             <input type="hidden" value="${deptAdmin.getDepartmentId()}" name="departmentId">
             <td><input type="submit" value="Add" class="bt"></td>
