@@ -13,7 +13,7 @@
     <a>Doctor Zone</a>
 </header>
 <section class="hh">
-        ${message}
+
         <form  action="get-patients" method="post" class="gg">
             <input type="hidden" value="<%=doctor.getDoctorId()%>" name="doctorId" class="in">
             <button>Get Patients List</button>
@@ -23,6 +23,10 @@
         <form action="get-patient-log" method="post" class="ll">
             <input type="text"  name="name" placeholder="name" class="info">
             <button>Get Patient Log</button>
+            <c:if test="${!empty message}">
+            <div class="alert"><span class="closebtn" onclick="this.parentElement.style.display='none'">
+            &times;</span><p>${message}</p></div>
+        </c:if>
         </form>
         <br/>
         <br/>
@@ -35,7 +39,7 @@
         </form>
         <br/>
         <br/>
-        <form action="add-visit" method="post" enctype = "multipart/form-data">
+        <form action="add-visit" method="post" enctype = "multipart/form-data" style="display: inline">
             <input type="text" name="patientName" placeholder="Patient Name">
             <input type="text" placeholder="Visit Date" name="date" onfocus="this.type='date'">
             <input type="text" placeholder="Reason" name="reason">
@@ -49,6 +53,8 @@
             <input type="hidden" value="<%=doctor.getDoctorId()%>" name="doctorId">
             <button >Add Visit</button>
         </form>
+            <a href="index.jsp" class="aa"><img src="assets/images/ar.png" class="pp"></a>
 </section>
+
 </body>
 </html>

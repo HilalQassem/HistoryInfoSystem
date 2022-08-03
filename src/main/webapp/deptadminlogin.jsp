@@ -10,12 +10,13 @@
 <main>
 
 <form action="deptAdmin-zone" method="post" class="form_class">
-    <input type="text" name="username" placeholder="Username" class="in">
-    <input type="password" name="password" placeholder="Password" class="in">
+    <input type="text" name="username" placeholder="Username" class="in" required>
+    <input type="password" name="password" placeholder="Password" class="in" required>
     <br/>
     <br/>
     <input type="submit" value="Login" class="su"/>
 </form>
+    <a href="index.jsp" class="aa"><img src="assets/images/ar.png" class="pp"></a>
 </main>
 <footer>
     <c:if test="${!empty message}">

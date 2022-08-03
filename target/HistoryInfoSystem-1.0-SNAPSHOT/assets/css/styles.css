@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
 body{
     padding: 1em;
     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAQElEQVQIW2P89OvDfwYo+PHjJ4zJwMHBzsAIk0SXAKkCS2KTAEu++vQSbizIKGQAl0SXAJkGlsQmAbcT2Shk+wH0sCzAEOZW1AAAAABJRU5ErkJggg==);
@@ -42,27 +43,35 @@ h1 {
     font-family: 'system-ui';
     box-shadow: 5px 5px 10px rgb(0,0,0,0.3);
     margin: auto;
+    display:block;
+    align-items: center;
 }
 .su{
     border-color: transparent;
     border-radius: 5px;
-    background-color: #FFE6D4;
+    background-color: lightsteelblue;
     padding: 8px 20px;
     font-family: 'system-ui';
     text-transform: uppercase;
     letter-spacing: .8px;
     display: block;
-    margin: 10px auto auto;
+     margin:auto;
     box-shadow: 6px 6px 5px rgb(0,0,0,0.2);
     cursor: pointer;
     font-family: 'Indie Flower', cursive;
     font-weight: bold;
-    color: lightsteelblue;
+    color: #FFE6D4;
+    width:fit-content;
+    height: fit-content;
 
 }
+.pp{
+    width: 90px;
+    height:90px;
+}
 .su:hover{
-  background-color: lightsteelblue;
-    color:#FFE6D4;
+  background-color: #FFE6D4;
+    color:lightsteelblue;
 }
 .in{
     width: 100%;
@@ -105,6 +114,8 @@ span{
     cursor:default;
     transition: 0.3s;
     padding: 10px;
+
+
 }
 
 
@@ -117,15 +128,47 @@ footer{
     justify-content: center;
 
 }
-@media (min-width: 768px) and (max-width:991px){
-
+@media (min-width: 350px) and (max-width: 992px){
+main{
+    align-items: normal;
+}
     header{
-        height:10vh;}
-
-    form{
-        height: 250px;
-        width: 50px;
-
+        height: 13vh;
+    }
+    .form_class{
+        display: inline;
+        width: 700px;
+        height: 300px;
+        margin-left: 90px;
+    }
+    .pp{
+        margin-top: 500px;
+    }
+    .aa{
+        margin-top: 500px;
+    }
+    h1{
+        font-size: 60px;
+    }
+    .in{
+        height: 50px;
+        font-size: 23px;
+    }
+    .su{
+        width: 150px;
+        height: 50px;
+        margin-left: 250px;
+        margin-top: 20px;
+        font-size: 23px;
+    }
+    .alert{
+        width: 400px;
+        height: 70px;
+        text-align: center;
+        font-size: 30px;
+    }
+    p{
+        margin-top:15px;
     }
 }
 
@@ -136,3 +179,6 @@ footer{
 @media (min-width: 1200px){
 
 }
+
+
+

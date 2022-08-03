@@ -4,6 +4,7 @@
 <head>
     <title>Login</title>
     <link rel="stylesheet" href="<c:url value="/assets/css/styles.css"/>" />
+
 </head>
 <body>
 <header>
@@ -12,12 +13,14 @@
 <main>
 
         <form action="patient-zone" method="post" class="form_class">
-            <input type="text" name="name" placeholder="Name" class="in">
-            <input type="number" name="ssn" placeholder="SSN" class="in">
+            <input type="text" name="name" placeholder="Name" class="in" required>
+            <input type="number" name="ssn" placeholder="SSN" class="in" required>
             <br/>
             <br/>
+
             <input type="submit" value="Login" class="su"/>
         </form>
+     <a href="index.jsp" class="aa"><img src="assets/images/ar.png" class="pp"></a>
 
 </main>
 <footer>
@@ -25,6 +28,7 @@
         <div class="alert"><span class="closebtn" onclick="this.parentElement.style.display='none'">
             &times;</span><p>${message}</p></div>
     </c:if>
+
 </footer>
 </body>
 </html>
