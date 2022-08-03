@@ -91,7 +91,6 @@
                <th>Doctor ID</th>
                <td><input type="number" value="${doctor.getDoctorId()}" name="doctorId" readonly></td>
                <td><input type="hidden" name="doctorId" readonly></td>
-
            </tr>
            <tr>
                <th>Doctor Name</th>
