@@ -16,9 +16,9 @@
 </head>
 <body>
 <main>
-    <div class="page">
+    <div class="page" >
         <h1>Profile</h1>
-        <table class="layout display responsive-table">
+        <table class="layout display responsive-table" style="display: inline">
             <thead>
             <tr>
                 <th>ID</th>
@@ -40,12 +40,15 @@
             </tr>
             </tbody>
         </table>
+
     </div>
         <br/>
         <br/>
     <div class="page">
-        <h1>Logs</h1>
-        <table class="layout display responsive-table">
+        <h1 style="display: inline">Logs</h1>
+        </br> </br>
+
+        <table class="layout display responsive-table" style="display: inline">
             <thead>
             <tr>
                 <th>VisitId</th>
@@ -73,7 +76,11 @@
                 </tbody>
             </c:forEach>
         </table>
+        <a href="index.jsp" ><img src="assets/images/ar.png" class="pp"></a>
+
     </div>
+
+
 </main>
 </body>
 </html>

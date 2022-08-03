@@ -2,8 +2,16 @@ body{
     font-family: 'Indie Flower', cursive;
     padding: 1em;
     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAQElEQVQIW2P89OvDfwYo+PHjJ4zJwMHBzsAIk0SXAKkCS2KTAEu++vQSbizIKGQAl0SXAJkGlsQmAbcT2Shk+wH0sCzAEOZW1AAAAABJRU5ErkJggg==);
+
+
+
 }
-input {border:none;
+input {
+    border:none;
+    text-align: center;
+}
+th{
+    text-align: center;
 }
 table.responsive-table td:nth-child(1){
     width:1px;
@@ -11,8 +19,27 @@ table.responsive-table td:nth-child(1){
 a{
     color: #739931;
 }
+.pp{
+    width: 90px;
+    height: 90px;
+    margin-left: 1200px;
+
+}
+
+.ss{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    z-index: 1;
+    margin: 300px 300px 300px 300px;
+}
+
+
 .page{
-    max-width: 60em;
+    max-width: 50em;
+    z-index: 0;
+
+
 }
 .page table th{
    padding: 10px ;
@@ -36,70 +63,19 @@ table.display td{
 
 }
 
-table.display th{ background: lightsteelblue; }
+table.display th{
+    background: lightsteelblue;
+    text-align: center;
+}
 table.display td{ background: #fff; }
 
 table.responsive-table {
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
 }
-
-@media (max-width: 30em){
-    table.responsive-table{
-        box-shadow: none;
-    }
-    table.responsive-table thead{
-        display: none;
-    }
-    table.display th,
-    table.display td{
-        padding: .5em;
-    }
-
-    table.responsive-table td:nth-child(1):before{
-        content: 'Number';
-    }
-    table.responsive-table td:nth-child(2):before{
-        content: 'Name';
-    }
-    table.responsive-table td:nth-child(1),
-    table.responsive-table td:nth-child(2){
-        padding-left: 25%;
-    }
-    table.responsive-table td:nth-child(1):before,
-    table.responsive-table td:nth-child(2):before{
-        position: absolute;
-        left: .5em;
-        font-weight: bold;
-    }
-
-    table.responsive-table tr,
-    table.responsive-table td{
-        display: block;
-    }
-    table.responsive-table tr{
-        position: relative;
-        margin-bottom: 1em;
-        box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
-    }
-    table.responsive-table td{
-        border-top: none;
-    }
-    table.responsive-table td.organisationnumber{
-        background: #D5E0CC;
-        border-top: 1px solid #B3BFAA;
-    }
-    table.responsive-table td.actions{
-        position: absolute;
-        top: 0;
-        right: 0;
-        border: none;
-        background: none;
-    }
-}
 .bt{
-    /*background-color: lightsteelblue;
+    background-color: lightsteelblue;
     border-radius: 8px;
-    padding: 4px;*/
+    padding: 4px;
     border-color: transparent;
     border-radius: 5px;
     background-color: #FFE6D4;
@@ -121,10 +97,93 @@ table.responsive-table {
     color:#FFE6D4;
 
 }
-@media (min-width: 768px){
 
+.page2{
+    visibility: hidden;
 }
 
-@media (min-width: 992px){
+@media (min-width:350px) and(max-width: 992px) {
+
+    table.responsive-table {
+        box-shadow: none;
     }
+
+    table.responsive-table thead {
+        display: none;
+    }
+
+    table.display th,
+    table.display td {
+        padding: .5em;
+    }
+
+
+    table.responsive-table td:nth-child(1):before {
+        content: 'Number';
+    }
+
+    table.responsive-table td:nth-child(2):before {
+        content: 'Name';
+    }
+
+    table.responsive-table td:nth-child(1),
+    table.responsive-table td:nth-child(2) {
+        padding-left: 25%;
+    }
+
+    table.responsive-table td:nth-child(1):before,
+    table.responsive-table td:nth-child(2):before {
+        position: absolute;
+        left: .5em;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    table.responsive-table tr,
+    table.responsive-table td {
+        display: block;
+    }
+
+    table.responsive-table tr {
+        position: relative;
+        margin-bottom: 1em;
+        box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+
+    }
+
+    table.responsive-table td {
+        border-top: none;
+
+    }
+
+    table.responsive-table td.organisationnumber {
+        background: #D5E0CC;
+        border-top: 1px solid #B3BFAA;
+    }
+
+    table.responsive-table td.actions {
+        position: absolute;
+        top: 0;
+        right: 0;
+        border: none;
+        background: none;
+    }
+}
+/*@media (min-width: 350px) and (max-width: 992px){
+    .page{
+        visibility: hidden;
+    }
+    .page2{
+        visibility: visible;
+        overflow: scroll;
+    }
+    table.display{
+        margin-left: 190px;
+    }
+    table.display td{
+        height: 140px;
+        width: 200px;
+    }
+
+}/*
 
