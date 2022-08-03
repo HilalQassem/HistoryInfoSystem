@@ -2,7 +2,6 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <html>
 <head>
-    <link rel="stylesheet" href="<c:url value="assets/css/styles.css"/>" />
    <link rel="stylesheet" href="<c:url value="assets/css/normalize.css"/>"/>
     <link rel="stylesheet" href="<c:url value="assets/css/home.css"/>" />
     <link rel="stylesheet" href="<c:url value="assets/css/all.min.css"/>"/>
@@ -17,7 +16,7 @@
 <header class="header">
     <a href="#" class="logo"> <i class="fas fa-heartbeat"></i>WeCare</a>
     <nav class="navbar">
-        <a href="#home">home</a>
+        <a href="index.jsp">home</a>
         <a href="sidramohamad77@gmail.com">contact</a>
         <a href="about.jsp">about</a>
     </nav>

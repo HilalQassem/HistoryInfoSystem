@@ -20,7 +20,7 @@ public class DoctorZoneServlet extends HttpServlet {
         if(!Objects.isNull(doctor) && !doctor.isBlocked()){
             HttpSession session=request.getSession();
             session.setAttribute("doctor",doctor);
-            request.getRequestDispatcher("/doctorzone.jsp").forward(request,response);
+            request.getRequestDispatcher("/doctorhome.jsp").forward(request,response);
         }
         else if(!Objects.isNull(doctor) && doctor.isBlocked()){
             request.setAttribute("message","You're blocked. please contact your departments' admin.");

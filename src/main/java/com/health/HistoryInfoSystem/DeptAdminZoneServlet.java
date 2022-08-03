@@ -24,7 +24,7 @@ public class DeptAdminZoneServlet extends HttpServlet {
             session.setAttribute("deptAdmin",deptAdmin);
             request.setAttribute("doctors",doctors);
             request.setAttribute("message","");
-            request.getRequestDispatcher("/deptadminzone.jsp").forward(request,response);
+            request.getRequestDispatcher("/departmenthome.jsp").forward(request,response);
         }
         else {
             request.setAttribute("message","Username or Password is incorrect");
