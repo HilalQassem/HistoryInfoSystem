@@ -18,7 +18,7 @@
     <a href="#" class="logo"> <i class="fas fa-heartbeat"></i>WeCare</a>
     <nav class="navbar">
         <a href="#home">home</a>
-        <a href="sidramohamad77@gmail.com">contact</a>
+        <a href="mailto:sidramohamad77@gmail.com">contact</a>
         <a href="about.jsp">about</a>
     </nav>
     <button id="menu-btn" class="fas fa-bars"></button>
@@ -86,7 +86,7 @@
     <div class="content">
         <h3>stay safe, stay healthy</h3>
         <p>welcome to our hospital, you can signup and see you're profile and visits</p>
-        <a href="#" class="btn"> contact us <span class="fas fa-chevron-right"></span></a>
+        <a href="mailto:sidramohamad77@gmail.com" class="btn"> contact us <span class="fas fa-chevron-right"></span></a>
     </div>
 </section>
 

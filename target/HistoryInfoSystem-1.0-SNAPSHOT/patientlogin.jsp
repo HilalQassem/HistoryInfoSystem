@@ -13,8 +13,8 @@
 <main>
 
         <form action="patient-zone" method="post" class="form_class">
-            <input type="text" name="name" placeholder="Name" class="in">
-            <input type="number" name="ssn" placeholder="SSN" class="in">
+            <input type="text" name="name" placeholder="Name" class="in" required>
+            <input type="number" name="ssn" placeholder="SSN" class="in" required>
             <br/>
             <br/>
 
