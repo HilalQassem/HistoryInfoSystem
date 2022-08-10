@@ -36,6 +36,17 @@
         </tr>
         </form>
       </c:forEach>
+        <form action="add-patient" method="post">
+        <tr>
+            <td></td>
+            <td><input type="text" name="name"  required></td>
+            <td><input type="text" name="dateOfBirth" onfocus="this.type='date'" required></td>
+            <td><input type="tel" name="number" required></td>
+            <td></td>
+            <td><input type="tel" name="ssn" required></td>
+            <td><button class="bt">Add Patient</button></td>
+        </tr>
+        </form>
     </table>
     </div>
 </main>

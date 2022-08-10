@@ -131,7 +131,7 @@ public class HistoryInfoDAO {
         Integer[] idOfDoctorsFound;
         try {
             String findDoctorsIdQuery = "SELECT DISTINCT doctorId,count(doctorId) over () numberOfDoctorsFound FROM doctor" +
-                    " WHERE departmentId=? GROUP BY doctorId;";
+                    " WHERE departmentId=? AND isDeleted!=1 GROUP BY doctorId;";
             PreparedStatement preparedStatement=connection.prepareStatement(findDoctorsIdQuery);
             preparedStatement.setInt(1,deptAdmin.getDepartmentId());
             ResultSet resultSet = preparedStatement.executeQuery();
@@ -143,7 +143,7 @@ public class HistoryInfoDAO {
             }
             doctorsFound=new Doctor[idOfDoctorsFound.length];
             for(int i=0;i<doctorsFound.length;i++){
-                String getDoctorsQuery = "SELECT * FROM doctor WHERE doctorId=?;";
+                String getDoctorsQuery = "SELECT * FROM doctor WHERE doctorId=? AND isDeleted!=1;";
                 preparedStatement=connection.prepareStatement(getDoctorsQuery);
                 preparedStatement.setInt(1,idOfDoctorsFound[i]);
                 resultSet = preparedStatement.executeQuery();
@@ -174,7 +174,7 @@ public class HistoryInfoDAO {
     public Integer deleteDoctor(Doctor oldDoctor){
         Integer status=0;
         try {
-            String deleteDoctorQuery="DELETE FROM doctor WHERE doctorId=?";
+            String deleteDoctorQuery="UPDATE doctor SET isDeleted=1 WHERE doctorId=?;";
             PreparedStatement preparedStatement=connection.prepareStatement(deleteDoctorQuery);
             preparedStatement.setInt(1,oldDoctor.getDoctorId());
             status=preparedStatement.executeUpdate();

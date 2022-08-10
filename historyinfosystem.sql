@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 19, 2022 at 07:57 PM
+-- Generation Time: Aug 07, 2022 at 07:53 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.28
 
@@ -93,15 +93,16 @@ CREATE TABLE `doctor` (
   `departmentId` int(11) DEFAULT NULL,
   `username` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `password` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `isBlocked` tinyint(1) NOT NULL DEFAULT 0
+  `isBlocked` tinyint(1) NOT NULL DEFAULT 0,
+  `isDeleted` tinyint(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `doctor`
 --
 
-INSERT INTO `doctor` (`doctorId`, `name`, `specialty`, `departmentId`, `username`, `password`, `isBlocked`) VALUES
-(1, 'Hilal Qassem', 'General', 2, 'hilalqassem', '1653628292', 0);
+INSERT INTO `doctor` (`doctorId`, `name`, `specialty`, `departmentId`, `username`, `password`, `isBlocked`, `isDeleted`) VALUES
+(1, 'Hilal Qassem', 'General', 2, 'hilalqassem', '1653628292', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -127,7 +128,10 @@ INSERT INTO `patient` (`patientId`, `name`, `dateOfBirth`, `number`, `joinDate`,
 (3, 'Frank Joel', '1999-01-01', '099999999', '2022-05-15', '10260002145'),
 (4, 'HH', '2000-01-01', '55555', '2022-05-16', '555555'),
 (5, 'Hilal', '2000-05-05', '54646', '2022-05-16', '5645646'),
-(6, 'Frank', '2000-01-01', '645463464', '2022-05-16', '564654564');
+(6, 'Frank', '2000-01-01', '645463464', '2022-05-16', '564654564'),
+(7, 'Hilal', '2022-06-23', '56298498', '2022-06-23', '10260002144'),
+(9, 'Hilal Qasse', '2022-06-23', '55555', '2022-06-23', '566561564'),
+(10, 'Frank Joel', '2020-07-06', '65156', '2022-06-23', '1584865121');
 
 -- --------------------------------------------------------
 
@@ -259,7 +263,7 @@ ALTER TABLE `doctor`
 -- AUTO_INCREMENT for table `patient`
 --
 ALTER TABLE `patient`
-  MODIFY `patientId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `patientId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `visit`
