@@ -48,6 +48,7 @@ public class AddVisitServlet extends HttpServlet {
         }
         if(controller.addVisit(request)!=0){
             request.setAttribute("message","Visit added successfully");
+            request.setAttribute("updateV", 1);
             request.getRequestDispatcher("/doctorzone.jsp").forward(request,response);
         }
         else {

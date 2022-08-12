@@ -24,7 +24,7 @@
 <body>
 
 <!--header-->
-<header class="header">
+<header class="header" id="header">
     <a href="#" class="logo"> <i class="fas fa-heartbeat"></i>WeCare</a>
     <nav class="navbar">
         <a href="#home">home</a>
@@ -34,7 +34,7 @@
     <button id="menu-btn" class="fas fa-bars"></button>
 </header>
 <!--sidebar section-->
-<div class="sidebar">
+<div class="sidebar" id="sidebar">
     <div class="logo-content">
         <div class="lo">
             <i class="fa fa-sign-in"></i>
@@ -153,14 +153,13 @@
 <script>
     function showPanel(id) {
         var x = document.getElementById(id);
-        var y = document.getElementById("home");
-        if (x.style.display === "none") {
-            y.style.display = "none"
-            x.style.display = "";
-        } else {
-            x.style.display = "none";
-            y.style.display = "";
-        }
+        document.getElementById("departmentManagementPanel").style.display = "none";
+        document.getElementById("deptAdminsManagementPanel").style.display = "none";
+        document.getElementById("home").style.display = "none";
+        document.getElementById("header").style.display = "none";
+        document.getElementById("sidebar").style.display = "none";
+        x.style.display = "";
+
     }
 </script>
 </body>

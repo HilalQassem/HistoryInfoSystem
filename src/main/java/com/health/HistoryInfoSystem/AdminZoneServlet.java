@@ -33,7 +33,7 @@ public class AdminZoneServlet extends HttpServlet {
             request.setAttribute("departments",departments);
             request.setAttribute("deptAdmins",deptAdmins);
             request.setAttribute("message","");
-            request.getRequestDispatcher("/adminhome.jsp").forward(request,response);
+            request.getRequestDispatcher("/adminzone.jsp").forward(request,response);
         }
         else {
             request.setAttribute("message","Username or Password is incorrect");

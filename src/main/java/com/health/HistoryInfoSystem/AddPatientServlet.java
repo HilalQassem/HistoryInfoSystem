@@ -15,6 +15,7 @@ public class AddPatientServlet extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         if(controller.addPatient(request)!=0){
             request.setAttribute("message","Patient added successfully");
+            request.setAttribute("updateP", 1);
             request.getRequestDispatcher("/doctorzone.jsp").forward(request,response);
         }
         else {

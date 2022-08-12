@@ -26,6 +26,6 @@ public class DeleteDoctorServlet extends HttpServlet {
         Doctor[] doctors =controller.getDeptDoctors(request);
         request.setAttribute("doctors",doctors);
         request.setAttribute("update",1);
-        request.getRequestDispatcher("/departmenthome.jsp").forward(request,response);
+        request.getRequestDispatcher("/deptadminzone.jsp").forward(request,response);
     }
 }
