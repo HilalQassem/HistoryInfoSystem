@@ -19,7 +19,7 @@
 </head>
 <body>
 <main>
-    ${message}
+
         <div class="page">
             <h1>Departments</h1>
             <table class="layout display responsive-table">
@@ -94,8 +94,12 @@
         </tbody>
     </table>
     </div>
+    <c:if test="${!empty message}">
+        <div class="alert"><span class="closebtn" onclick="this.parentElement.style.display='none'">
+            &times;</span><p>${message}</p></div>
+    </c:if>
 
-        <a href="index.jsp" class="aaa"><img src="assets/images/ar.png" class="pp"></a>
+    <a href="index.jsp" class="aaa"><img src="assets/images/ar.png" class="pp"></a>
 </main>
 </body>
 </html>

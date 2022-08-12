@@ -26,7 +26,7 @@
             <c:if test="${!empty message}">
             <div class="alert"><span class="closebtn" onclick="this.parentElement.style.display='none'">
             &times;</span><p>${message}</p></div>
-            </c:if>
+        </c:if>
         </form>
         <br/>
         <br/>
@@ -53,6 +53,10 @@
             <input type="hidden" value="<%=doctor.getDoctorId()%>" name="doctorId">
             <button >Add Visit</button>
         </form>
+    <c:if test="${!empty message}">
+        <div class="alert"><span class="closebtn" onclick="this.parentElement.style.display='none'">
+            &times;</span><p>${message}</p></div>
+    </c:if>
             <a href="index.jsp" class="aa"><img src="assets/images/ar.png" class="pp"></a>
 </section>
 </body>

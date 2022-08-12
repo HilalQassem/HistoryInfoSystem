@@ -16,6 +16,8 @@
         <br/>
         <input type="submit" value="Login" class="su"/>
     </form>
+
+
     <a href="index.jsp" class="aa"><img src="assets/images/ar.png" class="pp"></a>
 </main>
 <footer>
@@ -23,6 +25,7 @@
         <div class="alert"><span class="closebtn" onclick="this.parentElement.style.display='none'">
             &times;</span><p>${message}</p></div>
     </c:if>
+
 </footer>
 
 </body>
