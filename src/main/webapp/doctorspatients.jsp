@@ -49,6 +49,7 @@
         </form>
     </table>
     </div>
+    <a href="doctorzone.jsp" class="aa"><img src="assets/images/ar.png" class="pp"></a>
 </main>
 </body>
 </html>
