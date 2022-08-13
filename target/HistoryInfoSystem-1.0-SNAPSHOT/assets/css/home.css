@@ -59,7 +59,7 @@ section:nth-child(even){
     margin-left: 1rem;
 }
 
-header{
+.header{
     padding: 2rem 9%;
     position: fixed;
     top: 0;  right: 0;
@@ -72,21 +72,21 @@ header{
     justify-content: space-between;
     background: #fff;
 }
-header .logo{
+.header .logo{
     font-size: 2.5rem;
     color: var(--black);
     padding-left: 100px;
 }
-header .logo i{
+.header .logo i{
     color: var(--blue);
 }
-header .navbar a{
+.header .navbar a{
     font-size: 1.7rem;
     color: var(--light-color);
     margin-left: 2rem;
 
 }
-header .navbar a:hover{
+.header .navbar a:hover{
     color: var(--blue);
 }
 #menu-btn{
@@ -252,6 +252,11 @@ body{
         transition: none;
 
     }
+    .header .navbar.active{
+        transform: scale(1);
+        opacity: 1;
+        transition: .2s ease-out;
+    }
     .header .navbar a{
         font-size: 2rem;
         display: block;
@@ -297,21 +302,31 @@ body{
     .home.image img{
         width: 50px;
     }
+    .home.image img{
+        width: 100%;
+        margin-top: 10px;
+        margin-left: 0;
+        margin-right: 0;
+    }
     .home.content{
         width: 50px;
     }
     .sidebar .logo-content .lo{
         width: 10px;
     }
-    .home .content h3{
-        margin-left: 20px;
-    }
+
     .sidebar ul li button{
         width: 100px;
         font-size: 10px;
         margin-top: 10px;
         margin-bottom: 10px;
     }
+    section{
+        margin: 20px;
+    }
+
+
+
 
 
 }

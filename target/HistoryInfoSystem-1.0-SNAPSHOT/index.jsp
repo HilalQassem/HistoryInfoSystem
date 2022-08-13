@@ -21,7 +21,7 @@
         <a href="mailto:sidramohamad77@gmail.com">contact</a>
         <a href="about.jsp">about</a>
     </nav>
-    <button id="menu-btn" class="fas fa-bars"></button>
+    <div id="menu-btn" class="fas fa-bars"></div>
 </header>
 <!--sidebar section-->
 <div class="sidebar">
@@ -89,7 +89,19 @@
         <a href="mailto:sidramohamad77@gmail.com" class="btn"> contact us <span class="fas fa-chevron-right"></span></a>
     </div>
 </section>
+<script>
+    let menu = document.querySelector('#menu-btn');
+    let navbar = document.querySelector('.navbar');
+    menu.onclick = () =>{
+        menu.classList.toggle('fa-times');
+        navbar.classList.toggle('active');
 
+    }
+    window.onscroll = () =>{
+        menu.classList.remove('fa-times');
+        navbar.classList.remove('active');
+    }
+</script>
 </body>
 
 

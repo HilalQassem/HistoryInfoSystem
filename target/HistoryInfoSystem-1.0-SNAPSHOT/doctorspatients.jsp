@@ -10,7 +10,7 @@
 <body>
 <main>
     <div class="page">
-        <h1>Profile</h1>
+        <h1>My Patients</h1>
         <table class="layout display responsive-table">
             <thead>
       <tr>
