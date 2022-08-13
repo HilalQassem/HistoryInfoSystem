@@ -7,6 +7,7 @@
 <html>
 <head>
     <title>${patientName}</title>
+
     <link rel="stylesheet" href="<c:url value="/assets/css/zone.css"/>" />
 </head>
 <body>
@@ -43,6 +44,7 @@
             </tbody>
 </table>
     </div>
+    <a href="doctorzone.jsp" class="aa"><img src="assets/images/ar.png" class="pp"></a>
 </main>
 </body>
 </html>

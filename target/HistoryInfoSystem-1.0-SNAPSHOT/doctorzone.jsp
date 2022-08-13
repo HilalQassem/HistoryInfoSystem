@@ -55,8 +55,6 @@
             &times;</span><p>${message}</p></div>
     </c:if>
             <a href="index.jsp" class="aa"><img src="assets/images/ar.png" class="pp"></a>
-
 </section>
-
 </body>
 </html>

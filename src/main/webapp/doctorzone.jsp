@@ -23,10 +23,7 @@
         <form action="get-patient-log" method="post" class="ll">
             <input type="text"  name="name" placeholder="name" class="info" required>
             <button>Get Patient Log</button>
-            <c:if test="${!empty message}">
-            <div class="alert"><span class="closebtn" onclick="this.parentElement.style.display='none'">
-            &times;</span><p>${message}</p></div>
-        </c:if>
+
         </form>
         <br/>
         <br/>

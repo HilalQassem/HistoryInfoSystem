@@ -1,5 +1,5 @@
 body{
-    font-family: 'Indie Flower', cursive;
+    font-family: none;
     padding: 1em;
     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAQElEQVQIW2P89OvDfwYo+PHjJ4zJwMHBzsAIk0SXAKkCS2KTAEu++vQSbizIKGQAl0SXAJkGlsQmAbcT2Shk+wH0sCzAEOZW1AAAAABJRU5ErkJggg==);
 
@@ -92,7 +92,7 @@ table.responsive-table {
     margin-top: 10px;
     box-shadow: 6px 6px 5px rgb(0,0,0,0.2);
     cursor: pointer;
-    font-family: 'Indie Flower', cursive;
+
     font-weight: bold;
     color: lightsteelblue;
 }
@@ -102,9 +102,7 @@ table.responsive-table {
 
 }
 
-.page2{
-    visibility: hidden;
-}
+
 .closebtn{
     margin-left: 5px;
     color: #3f3838;
@@ -139,11 +137,16 @@ table.responsive-table {
 
 }
 
-@media (min-width:350px) and(max-width: 992px) {
+@media (min-width:350px) and (max-width: 992px) {
     .alert{
         left: 70%;
         transform: translate(-50%, -50%);
     }
+    h1{
+        font-size: xxx-large;
+    }
+
+    /*
 
     table.responsive-table {
         box-shadow: none;
@@ -151,14 +154,16 @@ table.responsive-table {
 
     table.responsive-table thead {
         display: none;
-    }
+    }*/
 
     table.display th,
     table.display td {
-        padding: 1em;
+        padding: .2em;
+        font-size: 40px;
+        text-align: center;
     }
 
-
+    /*
     table.responsive-table td:nth-child(1):before {
         content: 'Number';
     }
@@ -208,23 +213,7 @@ table.responsive-table {
         right: 0;
         border: none;
         background: none;
-    }
+    }*/
 }
-/*@media (min-width: 350px) and (max-width: 992px){
-    .page{
-        visibility: hidden;
-    }
-    .page2{
-        visibility: visible;
-        overflow: scroll;
-    }
-    table.display{
-        margin-left: 190px;
-    }
-    table.display td{
-        height: 140px;
-        width: 200px;
-    }
 
-}/*
 
